@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script id="bookmarklet_src" type="text/bookmarklet">
+      javascript: (function () {
+        var jsCode = document.createElement('script');
+        jsCode.setAttribute('src', 'https://kespry-experiments.s3.amazonaws.com/klouds/klouds.js');
+        document.body.appendChild(jsCode);
+      }());
+    </script>
+  </head>
+<body>
+Drag the following link to your bookmarks bar and click it when you're on the Cloud:
+<a id="bookmarklet" href="#">Klouds</a>
+<script>
+  document.getElementById('bookmarklet').setAttribute('href', document.getElementById('bookmarklet_src').text);
+</script>
+</body>
+</html>
